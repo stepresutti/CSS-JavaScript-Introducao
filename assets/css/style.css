@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Square+Peg&display=swap');
+
+:root {
+  --black: #2B2D42;
+  --text-light: #EDF2F4;
+  --text-accent: #8D99AE;
+  --light-red: #EF233C;
+  --dark-red: #D90429;
+  --green: #50C900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+body.light {
+  background-color: var(--text-light);
+  color: var(--black);
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--text-light)
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--text-accent)
+}
+
+main {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-size: max(5vw, 3.5rem);
+  color: var(--light-red);
+  font-weight: 200;
+  
+}
+
+.titulo {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  /* rotate: 180deg; */
+  transform: rotate(180deg)
+}
+
+.destaque {
+  color: var(--light-red);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sobre {
+  min-height: 90vh;
+}
+
+.sobre-texto {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem
+}
+
+.sobre-texto img {
+  height: 30vh;
+  border-radius: 50%;
+  border: 2px solid var(--dark-red);
+  padding: .5rem;
+}
+
+.video-geral {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.video {
+  margin: 0 auto;
+  width: 70%;
+  aspect-ratio: 16/9;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.275rem
+}
+
+hr {
+  margin: .5rem 0
+}
+
+h2 {
+  text-align: center;
+  font-size: max(2vw, 2.5rem);
+  color: var(--light-red);
+  font-weight: 200;
+  margin-bottom: .5rem;;
+}
+
+.contato {
+  margin-left: 2rem;
+}
+
+.contato p {
+  text-align: center;
+}
+
+.contact-page {
+  align-items: center;
+}
+
+
+form {
+  width: 100%;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  width: 100%;
+  color: var(--light-red);
+  font-weight: 600;
+  border: 0;
+  border-bottom: 2px solid var(--dark-red);
+  background-color: transparent;
+  margin-bottom: .25rem;
+  resize: none;
+}
+
+label {
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+#txtNome, #txtEmail, #txtAssunto {
+  margin-bottom: .5rem;
+}
+
+#msg {
+  text-align: center;
+}
+
+button {
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  background-color: var(--light-red);
+  border: 0;
+  border-radius: 8px;
+  color: var(--text-light);
+  font-weight: 700;
+  font-size: 1.275rem;
+  transition: background-color .3s;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--dark-red);
+}
+
+.mapa {
+  width: 35vw;
+  aspect-ratio: 16/9;
+
+}
+
+
+@media (max-width: 940px) and (orientation: portrait) {
+  body {
+    width: 90vw;
+  }
+  
+  .sobre-texto {
+    flex-direction: column-reverse;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .contact-page {
+    flex-direction: column;
+  }
+
+  .contato {
+    margin: 0;
+  }
+
+  .mapa {
+    display: block;
+    margin: 1rem auto;
+    width: 80vw;
+  }
+
+  button{
+    margin-bottom: 2rem;
+  }
+}
